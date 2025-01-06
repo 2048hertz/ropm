@@ -1,4 +1,5 @@
-RObert Package Manager (ROPM)
+# RObert Package Manager (ROPM)
+
 Written by Ayaan Eusufzai
 
 ROPM is a package manager/wrapper that blends in dnf and flatpaks into one utility through countainerised and normal, system-wide packages (CS system)
