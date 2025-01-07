@@ -6,13 +6,28 @@
 # Starting date: January 6th, 2025
 # Helper function to print usage instructions
 print_usage() {
-    echo "Usage: ropm-bash [-y] <command> <package>"
+    echo "Usage: ropm [-y] <command> <package>"
+    echo
+    echo "ROPM (RObert Package Manager) - A flexible package management tool for both containerized and system-wide installations."
+    echo
     echo "Commands:"
-    echo "  find <package>        Search for a package in both repositories"
-    echo "  install <package>     Install a package (choose between Containerized or Normal)"
-    echo "  remove <package>      Remove a package (choose between Containerized or Normal)"
+    echo "  find <package>        Search for a package in both repositories (Containerized and Normal)."
+    echo "  install <package>     Install a package (choose between Containerized or Normal)."
+    echo "  remove <package>      Remove a package (choose between Containerized or Normal)."
+    echo
     echo "Options:"
-    echo "  -y                    Automatic confirmation for operations"
+    echo "  -y                    Automatically confirm operations without prompting."
+    echo
+    echo "Examples:"
+    echo "  ropm find vlc         Search for the 'vlc' package in all repositories."
+    echo "  ropm install vlc      Prompt to install 'vlc' as either Containerized or Normal."
+    echo "  ropm -y install vlc   Automatically install 'vlc' without confirmation."
+    echo "  ropm remove vlc       Prompt to remove 'vlc' from Containerized or Normal repositories."
+    echo
+    echo "Notes:"
+    echo "  - Ensure Flatpak is installed and configured for Containerized operations."
+    echo "  - Ensure DNF is installed and configured for Normal operations."
+    echo "  - Use 'flatpak list --app' or 'dnf list installed' to view currently installed packages."
 }
 
 find_containerized() {
